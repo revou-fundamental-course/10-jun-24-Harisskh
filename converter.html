@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Konversi Suhu Online</title>
   <link rel="stylesheet" href="CSS\converter.css">
-  <link defer rel="stylesheet" href="JS\converter.js">
+  <script defer src="JS\converter.js"></script>
 </head>
 
 <body>
   <header>
     <a href="converter.html">
-      <img src="images\logo kj.png" alt="Logo Koentjie" class="logo">
+      <img src="images\Koentji black.png" alt="Logo Koentjie" class="logo">
     </a>
     <nav>
       <a href="#convert" class="active">Konversi</a>
@@ -24,16 +24,43 @@
   </header>
 
   <main>
-    <section id="konversi">
-      konversi ni
+    <section id="convert">
+      <div class="converter">
+        <h2>Konversi Suhu</h2>
+      
+        <label for="fromTemp">From:</label>
+        <select id="fromTemp">
+          <option value="C">Celcius</option>
+          <option value="R">Reamur</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+          <option value="Ra">Rankine</option>
+        </select>
+      
+        <label for="toTemp">To:</label>
+        <select id="toTemp">
+          <option value="C">Celcius</option>
+          <option value="R">Reamur</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">kelvin</option>
+          <option value="Ra">Rankine</option>
+        </select>
+
+        <label for="Temp">Suhu</label>
+        <input type="number" id="Temp" placeholder="Input Suhu">
+      
+        <button onclick="convert()">Konversi</button>
+        <label for="result">Hasil:</label>
+        <input type="text" id="result" readonly>
+      </div>
     </section>
 
     <section id="formula">
-      rumus ni
+      <h2>Rumus</h2>
     </section>
     
     <section id="desc">
-      dekripsi ni
+      <h2>Deskripsi</h2>
     </section>
   </main>
   

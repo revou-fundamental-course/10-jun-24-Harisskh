@@ -11,10 +11,8 @@
 header{
   position: fixed;
   display: flex;
-  top: 0;
-  left: 0;
   width: 100%;
-  padding: 5px;
+  padding: 5px 50px;
   background: linear-gradient(155deg, rgb(60, 28, 107), rgb(141, 212, 215));
   justify-content: space-between;
   align-items: center;
@@ -22,7 +20,7 @@ header{
 }
 
 header img{
-  width: 300px;
+  width: 250px;
   height: auto;
 }
 
@@ -33,25 +31,46 @@ header img:hover{
 
 nav a{
   position: relative;
-  margin-right: 35px;
+  margin-right: 100px;
   text-transform: uppercase;
   display: inline-block;
   align-content: center;
   text-align: center;
-  font-size: 14sp;
+  align-items: center;
+  font-size: 15px;
   color: #f7f7f7;
   font-weight: 600;
   transition: all .5s ease-in-out;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding-right: 50px;
+  padding: 20px 0;
 }
 
 nav a.active{
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
-  border-bottom: 3px solid inherit;
+  border-bottom: 3px solid #f7f7f7;
+}
+nav a:hover::after,
+nav a.active{
+  color: rgb(60, 28, 107);
+}
+nav a:active{
+  color: rgb(60, 28, 107);
 }
 
-nav a:hover{
 
+section{
+  padding: 50px;
+  width: 100%;
+  min-height: 100vh;
+  /* display: grid; */
+  background: #f7f7f7;
+}
+
+section:nth-child(odd){
+  background: wheat;
+}
+
+section:nth-child(1){
+  padding: 150px 50px 50px 50px;
 }

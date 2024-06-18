@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Naufal Haris">
   <meta name="keywords" content="Konversi, Suhu, Celcius, Fahrenheit">
   <meta name="description" content="Konversi Suhu">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +15,14 @@
 <body>
   <header>
     <a href="converter.html">
-      <img src="images\Koentji black.png" alt="Logo Koentjie" class="logo">
+      <img src="images\Koentji black.png" alt="Logo Koentjie" class="logo"> 
+      <!-- Koentji adalah group friend production di universitas saya -->
     </a>
     <nav>
       <a href="#convert" class="active">Konversi</a>
-      <a href="#formula">Rumus</a>
+      <a href="#concept">Konsep</a>
       <a href="#desc">Deskripsi</a>
+      <a href="#formula">Rumus</a>
     </nav>
   </header>
 
@@ -27,40 +30,86 @@
     <section id="convert">
       <div class="converter">
         <h2>Konversi Suhu</h2>
-      
-        <label for="fromTemp">From:</label>
-        <select id="fromTemp">
-          <option value="C">Celcius</option>
-          <option value="R">Reamur</option>
-          <option value="F">Fahrenheit</option>
-          <option value="K">Kelvin</option>
-          <option value="Ra">Rankine</option>
-        </select>
-      
-        <label for="toTemp">To:</label>
-        <select id="toTemp">
-          <option value="C">Celcius</option>
-          <option value="R">Reamur</option>
-          <option value="F">Fahrenheit</option>
-          <option value="K">kelvin</option>
-          <option value="Ra">Rankine</option>
-        </select>
 
-        <label for="Temp">Suhu</label>
-        <input type="number" id="Temp" placeholder="Input Suhu">
+      <div class="select-container">
+        <label class="lbl" for="fromTemp">Dari:</label>
+        <select class="select-box" id="fromTemp">
+          <option value="°C">Celcius</option>
+          <option value="°R">Reamur</option>
+          <option value="°F">Fahrenheit</option>
+          <option value="°K">Kelvin</option>
+          <option value="°Ra">Rankine</option>
+        </select>
       
-        <button onclick="convert()">Konversi</button>
-        <label for="result">Hasil:</label>
-        <input type="text" id="result" readonly>
+        <label class="lbl" for="toTemp">Ke:</label>
+        <select class="select-box" id="toTemp">
+          <option value="°C">Celcius</option>
+          <option value="°R">Reamur</option>
+          <option value="°F">Fahrenheit</option>
+          <option value="°K">Kelvin</option>
+          <option value="°Ra">Rankine</option>
+        </select>
+      </div>
+
+        <label class="lbl" for="Temp">Suhu</label>
+        <input class="input" type="number" id="Temp" placeholder="Input Suhu">
+        
+        <div class="button-container">
+          <button id="clearButton" onclick="clear()">Clear</button>
+          <button id="convertButton" onclick="convert()">Konversi</button>
+        </div>
+        <br>
+        <label class="lbl" for="result">Hasil:</label>
+        <input class="input" type="text" id="result" readonly>
       </div>
     </section>
 
-    <section id="formula">
-      <h2>Rumus</h2>
+    <section class="konsep-container" id="concept">
+      <div class="gambar-konsep">
+        <img src="" alt="">
+      </div>
+      <h2>Konsep Suhu</h2>
+    <div class="content-konsep">
+      <p>
+        <strong>Apa itu pengertian suhu?</strong> Setiap manusia dapat merasakan hawa panas dan dingin
+        dari sebuah benda karena adanya suhu. Benda yang dingin dapat dikatakan memiliki suhu lebih
+        rendah dibanding suhu benda yang panas. Sebaliknya, jika benda tersebut panas, artinya memiliki suhu 
+        yang lebih tinggi dari benda lain yang dingin. Dari hal tersebut, kita dapat mengetahui bahwa suhu merupakan
+        sebuah besaran. Sebenarnya masih banyak hal lain yang perlu diketahui tentang suhu. Sebab kita kerap
+        menemuinya dan merasakannya dalam kehidupan sehari-hari.
+      </p>
+      <p>
+        Suhu diartikan sebagai ukuran kuantitatif dari temperatur, panas atau dingin, dan diukur
+        menggunakan termometer. Suhu menjadi besaran yang akan menyatakan ukuran derajat dingin dan
+        panas suatu benda. Selain bisa dinyatakan secara kualitatif, suhu juga dapat dinyatakan secara 
+        kuantitatif dengan satuan derajat tertentu.
+      </p>
+      <p>
+        Misalnya air pada suhu di bawah titik bekunya (0 °C) akan berwujud beku dan di atas titik didihnya
+        (100 °C) akan berwujud gas. Besaran titik beku dan titik didih setiap zat berbeda-beda. Dalam konsep
+        termodinamika, suhu merupakan ukuran karaktersitik fisik dari gerak-gerak acak molekul-molekul yang ada
+        dalam suatu benda. Semakin tinggi suhu suatu benda maka semakin cepat gerak molekul-molekulnya. Pada saat
+        suhu mencapai nol mutlak yaitu <strong>0 K</strong>, maka dinyatakan molekul-molekul menjadi diam, tidak memiliki energi kinetik.
+      </p>
+      <p>
+        Secara kualitatif kita dapat menyatakan suatu benda panas jika suhunya lebih tinggi dari yang biasa kita rasakan
+        dan sebaliknya kita menyatakan dingin jika suhu benda tersebut lebih rendah dari yang biasa kita rasakan. Untuk menyatakan
+        besaran suhu yang lebih teliti maka digunakan ukuran kuantitatif menggunakan termometer. Ukuran suhu secara kuantitatif 
+        dinyatakan dalam beberapa satuan yaitu Celcius, Kelvin, Fahrenheit, Reamul dan Rankine. Masing-masing satuan suhu memiliki 
+        range skalanya tersendiri. <strong>Dengan perbedaan satuan suhu udara yang berlaku pada masing-masing negara maka konversi suhu online
+        dapat menjadi alat bantu yang praktis</strong>.      
+      </p>
+    </div>
     </section>
     
-    <section id="desc">
-      <h2>Deskripsi</h2>
+        <section id="desc">
+          <h2>Deskripsi</h2>
+          
+        </section>
+  
+    <section id="formula">
+      <h2>Rumus</h2>
+      
     </section>
   </main>
   

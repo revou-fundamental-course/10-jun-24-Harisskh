@@ -1,14 +1,14 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  font-family: 'poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
   position: fixed;
   display: flex;
   width: 100%;
@@ -19,58 +19,172 @@ header{
   z-index: 100;
 }
 
-header img{
-  width: 250px;
+header img {
+  width: 200px;
   height: auto;
 }
 
-header img:hover{
+header img:hover {
   cursor: pointer;
   opacity: 80%;
 }
 
-nav a{
-  position: relative;
-  margin-right: 100px;
-  text-transform: uppercase;
+nav a {
+  margin-right: 50px;
   display: inline-block;
-  align-content: center;
-  text-align: center;
-  align-items: center;
+  text-transform: uppercase;
   font-size: 15px;
   color: #f7f7f7;
   font-weight: 600;
-  transition: all .5s ease-in-out;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 20px 0;
+  transition: all .6s ease-in-out;
+  padding: 15px 0;
 }
-
 nav a.active{
-  -webkit-transform: scale(1.08);
-  transform: scale(1.08);
   border-bottom: 3px solid #f7f7f7;
+  border-bottom-style: groove;
+  transform: scale(1.08);
 }
-nav a:hover::after,
-nav a.active{
+nav a.active,
+nav a:hover {
   color: rgb(60, 28, 107);
 }
 nav a:active{
-  color: rgb(60, 28, 107);
+  color: #333;
 }
 
-
-section{
-  padding: 50px;
+section {
+  padding: 100px 50px;
   width: 100%;
   min-height: 100vh;
-  /* display: grid; */
-  background: #f7f7f7;
-}
-
-section:nth-child(odd){
   background: wheat;
 }
 
-section:nth-child(1){
-  padding: 150px 50px 50px 50px;
+section:nth-child(odd){
+  background: #93abce;
+}
+
+section:nth-child(1) {
+  padding: 135px 50px 50px 50px;
+  background-image: url('../images/bgSection1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; 
+}
+
+.converter {
+  position: relative;
+  text-align: center;
+  max-width: 30%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(85, 112, 188, 0.9); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #ddd6d6;
+}
+
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.lbl{
+  font-weight: 600;
+  color: #ddd6d6;
+}
+
+.select-box:hover{
+  cursor: pointer;
+  color: #f7f7f7;
+  background-color: rgba(28, 87, 170, 0.656);
+  transition: all .3s ease-in-out;
+}
+.select-box:focus{
+  background-color: rgba(28, 87, 170, 0.656);
+  color: #f7f7f7;
+}
+
+.converter h2 {
+  padding-bottom: 30px;
+  cursor: default;
+}
+
+#result {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  height: 40px;
+  margin: 10px 2.5%;
+  font-size: 15px;
+  font-weight: 700;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+#clearButton{
+  background: linear-gradient(90deg, #6616d0, #ac34e7);
+  width: 35%;
+}
+#clearButton:hover {
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.546);
+  background: linear-gradient(145deg, #ed1bca, #831187);
+}
+#clearButton:active {
+  box-shadow: none;
+  transition-duration: 200ms;
+  background:linear-gradient(75deg, rgb(145, 69, 183),rgb(88, 22, 122) ) ;
+}
+
+#convertButton{
+  background: linear-gradient(90deg, #104492, #4e94fd);
+  width: 40%;
+}
+#convertButton:hover {
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.481);
+  background: linear-gradient(145deg, #025ce3, #84a6d8);
+}
+#convertButton:active {
+  box-shadow: none;
+  transition-duration: 200ms;
+  background:linear-gradient(75deg, rgb(13, 91, 173),rgb(147, 172, 197) );
+}
+
+.konsep-container{
+  color: #333;
+}
+.konsep-container h2{
+  padding-bottom: 20px;
+}
+
+.konsep-container p{
+  padding-top: 10px;
+  font-weight: 300;
+}
+
+.content-konsep{
+  width: 50%;
 }

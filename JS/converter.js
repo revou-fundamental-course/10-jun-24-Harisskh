@@ -18,6 +18,11 @@ window.onscroll = () => {
   });
 };
 
+document.getElementById('clearButton').addEventListener('click', function() {
+  document.getElementById('Temp').value = '';
+  document.getElementById('result').value = '';
+});
+
 // fungsi konversi
 function convert(){
 var fromTemp = document.getElementById('fromTemp').value;
@@ -27,101 +32,108 @@ var Temp = parseFloat(document.getElementById('Temp').value);
 var convertValue;
 var result;
 
+// kondisi jika nan
+if(isNaN(Temp)){
+  document.getElementById('result').value = 'Silahkan Input Suhu Terlebih Dahulu';
+  return;
+}
+
 switch(fromTemp){
-  case 'C':
-    if(toTemp == 'F'){
+  case '°C':
+    if(toTemp == '°F'){
       convertValue = (Temp * 9/5) + 32;
-      result = 'F';
-    } else if(toTemp == 'R'){
+      result = '°F';
+    } else if(toTemp == '°R'){
       convertValue = Temp * 4/5;
-      result = 'R';
-    } else if(toTemp == 'K'){
+      result = '°R';
+    } else if(toTemp == '°K'){
       convertValue = Temp + 273.15;
-      result = 'K';
-    } else if(toTemp == 'Ra'){
+      result = '°K';
+    } else if(toTemp == '°Ra'){
       convertValue = (Temp + 273.15) * 9/5;
-      result = 'Ra';
+      result = '°Ra';
     } else {
       convertValue = Temp;
-      result = 'C';
+      result = '°C';
     }
     break;
   
-    case 'R':
-    if(toTemp == 'F'){
+    case '°R':
+    if(toTemp == '°F'){
       convertValue = (Temp * 9/4) + 32;
-      result = 'F';
-    } else if(toTemp == 'C'){
+      result = '°F';
+    } else if(toTemp == '°C'){
       convertValue = Temp * 5/4;
-      result = 'C';
-    } else if(toTemp == 'K'){
+      result = '°C';
+    } else if(toTemp == '°K'){
       convertValue = (Temp * 5/4) + 273.15;
-      result = 'K';
-    } else if(toTemp == 'Ra'){
+      result = '°K';
+    } else if(toTemp == '°Ra'){
       convertValue = (Temp * 9/4) + 491.67;
-      result = 'Ra';
+      result = '°Ra';
     } else {
       convertValue = Temp;
-      result = 'R';
+      result = '°R';
     }
     break;
   
-    case 'F':
-    if(toTemp == 'C'){
+    case '°F':
+    if(toTemp == '°C'){
       convertValue = (Temp - 32) * 5/9;
-      result = 'C';
-    } else if(toTemp == 'R'){
+      result = '°C';
+    } else if(toTemp == '°R'){
       convertValue = 4/9 * (Temp - 32);
-      result = 'R';
-    } else if(toTemp == 'K'){
+      result = '°R';
+    } else if(toTemp == '°K'){
       convertValue = (Temp + 459.67) * 5/9;
-      result = 'K';
-    } else if(toTemp == 'Ra'){
+      result = '°K';
+    } else if(toTemp == '°Ra'){
       convertValue = Temp + 459.67;
-      result = 'Ra';
+      result = '°Ra';
     } else {
       convertValue = Temp;
-      result = 'F';
+      result = '°F';
     }
     break;
   
-    case 'K':
-    if(toTemp == 'F'){
+    case '°K':
+    if(toTemp == '°F'){
       convertValue = (Temp * 9/5) - 459.67;
-      result = 'F';
-    } else if(toTemp == 'R'){
+      result = '°F';
+    } else if(toTemp == '°R'){
       convertValue = 4/5 * (Temp - 273.15);
-      result = 'R';
-    } else if(toTemp == 'C'){
+      result = '°R';
+    } else if(toTemp == '°C'){
       convertValue = Temp - 273.15;
-      result = 'C';
-    } else if(toTemp == 'Ra'){
+      result = '°C';
+    } else if(toTemp == '°Ra'){
       convertValue = Temp * 9/5;
-      result = 'Ra';
+      result = '°Ra';
     } else {
       convertValue = Temp;
-      result = 'K';
+      result = '°K';
     }
     break;
 
-    case 'Ra':
-    if(toTemp == 'F'){
+    case '°Ra':
+    if(toTemp == '°F'){
       convertValue = Temp - 459.67;
-      result = 'F';
-    } else if(toTemp == 'R'){
+      result = '°F';
+    } else if(toTemp == '°R'){
       convertValue = Temp * 4/9 - 218.52;
-      result = 'R';
-    } else if(toTemp == 'C'){
+      result = '°R';
+    } else if(toTemp == '°C'){
       convertValue = (Temp - 491.67) * 5/9;
-      result = 'C';
-    } else if(toTemp == 'K'){
+      result = '°C';
+    } else if(toTemp == '°K'){
       convertValue = Temp * 5/9;
-      result = 'K';
+      result = '°K';
     } else {
       convertValue = Temp;
-      result = 'Ra';
+      result = '°Ra';
     }
     break;
   }
+  console.log("Convert function success")
   document.getElementById('result').value = convertValue.toFixed(2) + ' ' + result;
 }

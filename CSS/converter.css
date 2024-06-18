@@ -56,11 +56,20 @@ section {
   padding: 100px 50px;
   width: 100%;
   min-height: 100vh;
-  background: wheat;
 }
 
 section:nth-child(odd){
-  background: #93abce;
+  background-image: url("../images/bgodd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section:nth-child(even){
+  background-image: url("../images/bgeven.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 section:nth-child(1) {
@@ -173,18 +182,48 @@ button {
   background:linear-gradient(75deg, rgb(13, 91, 173),rgb(147, 172, 197) );
 }
 
-.konsep-container{
+
+.container{
   color: #333;
 }
-.konsep-container h2{
+.container h2{
   padding-bottom: 20px;
 }
-
-.konsep-container p{
+.container p, pre{
   padding-top: 10px;
   font-weight: 300;
+  text-align: justify;
+}
+.content-konsep{
+  display: inline-block;
+  justify-content: center;
+  width: 50%;
 }
 
-.content-konsep{
+.content-skala{
   width: 50%;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.img-sec1{
+  margin-top: 120px;
+  float: right;
+  width: 45%;
+  height: auto;
+  border: 5px solid #5483cb;
+  border-radius: 5%;
+}
+
+.skala-container{
+  display: flex;
+  align-items: flex-start;
+}
+.img-sec2{
+  margin-top: 40px;
+  float: left;
+  width: 45%;
+  height: auto;
+  border: 5px solid #8a308d78;
+  border-radius: 8%;
 }

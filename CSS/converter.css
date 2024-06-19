@@ -266,11 +266,25 @@ button {
 
 @media (min-width: 768px) {
   header {
-    padding: 0 30px;
+    padding: 10px 30px;
   }
 
   .converter {
     max-width: 35%;
+    margin-top: 70px;
+    padding: 20px;
+  }
+
+  select, input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
   }
 
   .button-container {
@@ -279,20 +293,65 @@ button {
 
   button {
     width: auto;
-  }
+    border: none;
+    height: 50px;
+    margin: 10px 2.5%;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
 
   .skala-container{
     justify-content: space-around;
   }
 
   .img-sec1, .img-sec2 {
+    margin-top: 80px;
     width: 45%;
     max-width: 45%;
   }
 
+}
+.container h2{
+  padding-bottom: 40px;
+  font-size: 30px;
+}
+.container p, pre{
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: justify;
+}
+.content-konsep{
+  display: inline-block;
+  justify-content: center;
+  width: 50%;
+}
+
+.content-skala{
+  width: 50%;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+
   .content-konsep, .content-skala {
     width: 50%;
     max-width: 50%;
+  }
+
+  .rumus-container ol li p{
+    margin: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+  }
+
+  .rumus-container li h3{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 21px;
   }
 
   .rumus-container {
@@ -303,7 +362,6 @@ button {
     width: 30%;
     margin-bottom: 0;
   }
-}
 
 
 @media (max-width: 767px) {
@@ -322,11 +380,6 @@ button {
   nav a {
     padding: 15px;
     font-size: 11px;
-  }
-
-  .converter {
-    margin-top: 40px;
-    max-width: 80%;
   }
 
   .button-container {

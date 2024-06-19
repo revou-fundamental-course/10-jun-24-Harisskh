@@ -1,139 +1,288 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Naufal Haris">
-  <meta name="keywords" content="Konversi, Suhu, Celcius, Fahrenheit">
-  <meta name="description" content="Konversi Suhu">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konversi Suhu Online</title>
-  <link rel="stylesheet" href="CSS\converter.css">
-  <script defer src="JS\converter.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Naufal Haris" />
+    <meta name="keywords" content="Konversi, Suhu, Celcius, Fahrenheit" />
+    <meta name="description" content="Konversi Suhu" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Suhu Online</title>
+    <link rel="shortcut icon" type="x-icon" href="images\head-icon.png">
+    <link rel="stylesheet" href="CSS\converter.css" />
+    <script defer src="JS\converter.js"></script>
+  </head>
 
-<body>
-  <header>
-    <a href="converter.html">
-      <img src="images\Koentji black.png" alt="Logo Koentjie" class="logo"> 
-      <!-- Koentji adalah group friend production di universitas saya -->
-    </a>
-    <nav>
-      <a href="#convert" class="active">Konversi</a>
-      <a href="#concept">Konsep</a>
-      <a href="#scala">Skala Tetapan</a>
-      <a href="#formula">Rumus</a>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <a href="converter.html">
+        <img src="images\Koentji black.png" alt="Logo Koentjie" class="logo" />
+        <!-- Koentji adalah group friend production di universitas saya -->
+      </a>
+      <nav>
+        <a href="#convert" class="active">Konversi</a>
+        <a href="#concept">Konsep</a>
+        <a href="#scala">Skala Tetapan</a>
+        <a href="#formula">Rumus</a>
+      </nav>
+    </header>
 
-  <main>
-    <section id="convert">
-      <div class="converter">
-        <h2>Konversi Suhu</h2>
+    <main>
+      <section id="convert">
+        <div class="converter">
+          <h2>Konversi Suhu</h2>
 
-      <div class="select-container">
-        <label class="lbl" for="fromTemp">Dari:</label>
-        <select class="select-box" id="fromTemp">
-          <option value="°C">Celcius</option>
-          <option value="°R">Reamur</option>
-          <option value="°F">Fahrenheit</option>
-          <option value="°K">Kelvin</option>
-          <option value="°Ra">Rankine</option>
-        </select>
-      
-        <label class="lbl" for="toTemp">Ke:</label>
-        <select class="select-box" id="toTemp">
-          <option value="°C">Celcius</option>
-          <option value="°R">Reamur</option>
-          <option value="°F">Fahrenheit</option>
-          <option value="°K">Kelvin</option>
-          <option value="°Ra">Rankine</option>
-        </select>
-      </div>
+          <div class="select-container">
+            <label class="lbl" for="fromTemp">Dari:</label>
+            <select class="select-box" id="fromTemp">
+              <option value="°C">Celcius</option>
+              <option value="°R">Reamur</option>
+              <option value="°F">Fahrenheit</option>
+              <option value="°K">Kelvin</option>
+              <option value="°Ra">Rankine</option>
+            </select>
 
-        <label class="lbl" for="Temp">Suhu</label>
-        <input class="input" type="number" id="Temp" placeholder="Input Suhu">
-        
-        <div class="button-container">
-          <button id="clearButton" onclick="clear()">Clear</button>
-          <button id="convertButton" onclick="convert()">Konversi</button>
+            <label class="lbl" for="toTemp">Ke:</label>
+            <select class="select-box" id="toTemp">
+              <option value="°C">Celcius</option>
+              <option value="°R">Reamur</option>
+              <option value="°F">Fahrenheit</option>
+              <option value="°K">Kelvin</option>
+              <option value="°Ra">Rankine</option>
+            </select>
+          </div>
+
+          <label class="lbl" for="Temp">Suhu</label>
+          <input class="input" type="number" id="Temp" placeholder="Input Suhu"/>
+
+          <div class="button-container">
+            <button id="clearButton" onclick="clear()">Clear</button>
+            <button id="convertButton" onclick="convert()">Konversi</button>
+          </div>
+          <br/>
+          <label class="lbl" for="result">Hasil:</label>
+          <input class="input" type="text" id="result" readonly />
         </div>
-        <br>
-        <label class="lbl" for="result">Hasil:</label>
-        <input class="input" type="text" id="result" readonly>
-      </div>
-    </section>
+      </section>
 
-    <section class="container" id="concept">
-      <div>
-        <img class="img-sec1" src="images\termometer.jpg" alt="Gambar Termometer">
-      </div>
-      <h2>Konsep Suhu</h2>
-    <div class="content-konsep">
-      <p>
-        <strong>Apa itu pengertian suhu?</strong> Setiap manusia dapat merasakan hawa panas dan dingin
-        dari sebuah benda karena adanya suhu. Benda yang dingin dapat dikatakan memiliki suhu lebih
-        rendah dibanding suhu benda yang panas. Sebaliknya, jika benda tersebut panas, artinya memiliki suhu 
-        yang lebih tinggi dari benda lain yang dingin. Dari hal tersebut, kita dapat mengetahui bahwa suhu merupakan
-        sebuah besaran. Sebenarnya masih banyak hal lain yang perlu diketahui tentang suhu. Sebab kita kerap
-        menemuinya dan merasakannya dalam kehidupan sehari-hari.
-      </p>
-      <p>
-        Suhu diartikan sebagai ukuran kuantitatif dari temperatur, panas atau dingin, dan diukur
-        menggunakan termometer. Suhu menjadi besaran yang akan menyatakan ukuran derajat dingin dan
-        panas suatu benda. Selain bisa dinyatakan secara kualitatif, suhu juga dapat dinyatakan secara 
-        kuantitatif dengan satuan derajat tertentu.
-      </p>
-      <p>
-        Misalnya air pada suhu di bawah titik bekunya (0 °C) akan berwujud beku dan di atas titik didihnya
-        (100 °C) akan berwujud gas. Besaran titik beku dan titik didih setiap zat berbeda-beda. Dalam konsep
-        termodinamika, suhu merupakan ukuran karaktersitik fisik dari gerak-gerak acak molekul-molekul yang ada
-        dalam suatu benda. Semakin tinggi suhu suatu benda maka semakin cepat gerak molekul-molekulnya. Pada saat
-        suhu mencapai nol mutlak yaitu <strong>0 K</strong>, maka dinyatakan molekul-molekul menjadi diam, tidak memiliki energi kinetik.
-      </p>
-      <p>
-        Secara kualitatif kita dapat menyatakan suatu benda panas jika suhunya lebih tinggi dari yang biasa kita rasakan
-        dan sebaliknya kita menyatakan dingin jika suhu benda tersebut lebih rendah dari yang biasa kita rasakan. Untuk menyatakan
-        besaran suhu yang lebih teliti maka digunakan ukuran kuantitatif menggunakan termometer. Ukuran suhu secara kuantitatif 
-        dinyatakan dalam beberapa satuan yaitu Celcius, Kelvin, Fahrenheit, Reamul dan Rankine. Masing-masing satuan suhu memiliki 
-        range skalanya tersendiri. <strong>Dengan perbedaan satuan suhu udara yang berlaku pada masing-masing negara maka konversi suhu online
-        dapat menjadi alat bantu yang praktis</strong>.      
-      </p>
-    </div>
-    </section>
-    
-    <section class="container" id="scala">
-      <h2>Skala Tetapan Suhu</h2>
-      <div class="skala-container">
-            <img class="img-sec2" src="images\skala tetapan.jpg" alt="Skala Termometer">
-        <div class="content-skala">
+      <section class="container" id="concept">
+        <div>
+          <img class="img-sec1" src="images\termometer.jpg" alt="Gambar Termometer"/>
+        </div>
+        <h2>Konsep Suhu</h2>
+        <div class="content-konsep">
           <p>
-            Skala tetapan suhu adalah skala yang didasarkan pada titik-titik tetap tertentu yang memiliki suhu yang pasti dan tidak berubah. 
-            Skala ini digunakan sebagai referensi untuk mengkalibrasi alat-alat pengukur suhu. 
-            Titik tetap atas mengacu pada titik didih air, dimana setiap termometer mempunyai nilai yang berbeda. 
+            <strong>Apa itu pengertian suhu?</strong> Setiap manusia dapat
+            merasakan hawa panas dan dingin dari sebuah benda karena adanya
+            suhu. Benda yang dingin dapat dikatakan memiliki suhu lebih rendah
+            dibanding suhu benda yang panas. Sebaliknya, jika benda tersebut
+            panas, artinya memiliki suhu yang lebih tinggi dari benda lain yang
+            dingin. Dari hal tersebut, kita dapat mengetahui bahwa suhu
+            merupakan sebuah besaran. Sebenarnya masih banyak hal lain yang
+            perlu diketahui tentang suhu. Sebab kita kerap menemuinya dan
+            merasakannya dalam kehidupan sehari-hari.
           </p>
-          <pre>
-            - Pada skala Celcius (°C) titik didih air ditetapkan pada skala 100.
-            - Pada Fahrenheit (°F) titik didih air ditetapkan pada skala 212
-            - Pada Kelvin (°K) titik didih air ditetapkan pada skala 375.15
-            - Pada Reamur (°R) titik didih air ditetapkan pada skala 80 
+          <p>
+            Suhu diartikan sebagai ukuran kuantitatif dari temperatur, panas
+            atau dingin, dan diukur menggunakan termometer. Suhu menjadi besaran
+            yang akan menyatakan ukuran derajat dingin dan panas suatu benda.
+            Selain bisa dinyatakan secara kualitatif, suhu juga dapat dinyatakan
+            secara kuantitatif dengan satuan derajat tertentu.
+          </p>
+          <p>
+            Misalnya air pada suhu di bawah titik bekunya (0 °C) akan berwujud
+            beku dan di atas titik didihnya (100 °C) akan berwujud gas. Besaran
+            titik beku dan titik didih setiap zat berbeda-beda. Dalam konsep
+            termodinamika, suhu merupakan ukuran karaktersitik fisik dari
+            gerak-gerak acak molekul-molekul yang ada dalam suatu benda. Semakin
+            tinggi suhu suatu benda maka semakin cepat gerak molekul-molekulnya.
+            Pada saat suhu mencapai nol mutlak yaitu <strong>0 K</strong>, maka
+            dinyatakan molekul-molekul menjadi diam, tidak memiliki energi
+            kinetik.
+          </p>
+          <p>
+            Secara kualitatif kita dapat menyatakan suatu benda panas jika
+            suhunya lebih tinggi dari yang biasa kita rasakan dan sebaliknya
+            kita menyatakan dingin jika suhu benda tersebut lebih rendah dari
+            yang biasa kita rasakan. Untuk menyatakan besaran suhu yang lebih
+            teliti maka digunakan ukuran kuantitatif menggunakan termometer.
+            Ukuran suhu secara kuantitatif dinyatakan dalam beberapa satuan
+            yaitu Celcius, Kelvin, Fahrenheit, Reamur dan Rankine. Masing-masing
+            satuan suhu memiliki range skalanya tersendiri.
+            <strong>Dengan perbedaan satuan suhu udara yang berlaku pada
+            masing-masing negara maka konversi suhu online dapat menjadi alat
+            bantu yang praktis</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="container" id="scala">
+        <h2>Skala Tetapan Suhu</h2>
+        <div class="skala-container">
+          <img
+            class="img-sec2"
+            src="images\skala tetapan.jpg"
+            alt="Skala Termometer"
+          />
+          <div class="content-skala">
+            <p>
+              Skala tetapan suhu adalah skala yang didasarkan pada titik-titik
+              tetap tertentu yang memiliki suhu yang pasti dan tidak berubah.
+              Skala ini digunakan sebagai referensi untuk mengkalibrasi
+              alat-alat pengukur suhu. Titik tetap atas mengacu pada titik didih
+              air, dimana setiap termometer mempunyai nilai yang berbeda.
+            </p>
+            <p>
+            - Pada skala Celcius (°C) titik didih air ditetapkan pada skala 100 <br>
+            - Pada Fahrenheit (°F) titik didih air ditetapkan pada skala 212 <br>
+            - Pada Kelvin (°K) titik didih air ditetapkan pada skala 375.15 <br>
+            - Pada Reamur (°R) titik didih air ditetapkan pada skala 80 <br>
             - pada Rankine (°Ra) titik didih air ditetapkan pada skala 671.67
-          </pre>
-          <p>
-            Adapun titik tetap bawah ditetapkan berdasarkan titik beku air dimana Celcius, Fahrenheit, Kelvin, Reamur dan Rankine 
-            berturut-turut titik beku air ditetapkan pada skala 0, 32, 273.15, 0 dan 491,67. Skala antara titik tetap atas dan titik tetap bawah 
-            merupakan interpolasi antara kedua titik tetap tersebut. Sekedar catatan untuk satuan dalam Kelvin tidak menggunakan simbol derajat 
-            (⁰) sebagai konsensus bahwa Kelvin adalah satuan suhu mutlak.
-          </p>
+            </p>
+            <p>
+              Adapun titik tetap bawah ditetapkan berdasarkan titik beku air
+              dimana Celcius, Fahrenheit, Kelvin, Reamur dan Rankine
+              berturut-turut titik beku air ditetapkan pada skala 0, 32, 273.15,
+              0 dan 491,67. Skala antara titik tetap atas dan titik tetap bawah
+              merupakan interpolasi antara kedua titik tetap tersebut. Sekedar
+              catatan untuk satuan dalam Kelvin tidak menggunakan simbol derajat
+              (⁰) sebagai konsensus bahwa Kelvin adalah satuan suhu mutlak.
+            </p>
+          </div>
         </div>
-      </div>          
-        </section>
-  
-    <section id="formula">
-      <h2>Rumus</h2>
-      
-    </section>
-  </main>
-  
-</body>
+      </section>
+
+      <section class="containerFormula" id="formula">
+        <h2>Rumus</h2>
+        <div class="rumus-container">
+         <div class="rumus-left">
+          <ul class="judul-rumus">
+            <li type="none"> <h3> Konversi Suhu Celcius (C) </h3> </li>
+            <ol type="1">
+              <li> 
+                <p> 
+                  Rumus konversi suhu <strong>Celcius ke Fahrenheit</strong> <br>⁰F = (9/5) × ⁰C + 32
+                </p> 
+              </li>
+              <li>
+                <p> 
+                  Rumus konversi suhu <strong>Celcius ke Kelvin</strong> <br>⁰K = ⁰C + 273.15
+                </p> 
+              </li>
+              <li>
+                <p> 
+                  Rumus konversi suhu <strong>Celcius ke Reamur</strong> <br>⁰R = (4/5) × ⁰C
+                </p> 
+              </li>
+              <li>
+                <p class="last-p"> 
+                  Rumus konversi suhu <strong>Celcius ke Rankine</strong> <br>⁰Ra = (⁰C + 273.15) × 9/5
+                </p> 
+              </li>
+            </ol>
+
+            <li type="none"> <h3>Konversi Suhu Fahrenheit (F)</h3> </li>
+            <ol type="1"><li> 
+              <p>
+                Rumus konversi suhu <strong>Fahrenheit ke Celcius</strong> <br>°C = (°F - 32) × 5/9
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Fahrenheit ke Kelvin</strong> <br>°K = (°F + 459.67) × 5/9
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Fahrenheit ke Reamur</strong> <br>°R =  4/9 × (F-32)
+              </p> 
+            </li>
+            <li>
+              <p class="last-p"> 
+                Rumus konversi suhu <strong>Fahrenheit ke Rankine</strong> <br>°Ra = °F + 459.67
+              </p> 
+            </li>
+            </ol>
+          </div>
+
+            <div class="rumus-mid">
+            <li type="none"> <h3>Konversi Suhu Kelvin (K)</h3> </li>
+            <ol type="1"><li> 
+              <p>
+                Rumus konversi suhu <strong>Kelvin ke Celcius</strong> <br>°C= K - 273.15
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Kelvin ke Fahrenheit</strong> <br>°F = (K × 9/5) - 459.67
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Kelvin ke Reamur</strong> <br>°R = 4/5 × (K - 273)
+              </p> 
+            </li>
+            <li>
+              <p class="last-p"> 
+                Rumus konversi suhu <strong>Kelvin ke Rankine</strong> <br>°Ra = K × 9/5
+              </p> 
+            </li>
+            </ol>
+          </div>
+            
+          <div class="rumus-right">
+            <li type="none"> <h3>Konversi Suhu Reamur (R)</h3> </li>
+            <ol type="1"><li> 
+              <p>
+                Rumus konversi suhu <strong>Reamur ke Celcius</strong> <br>°C = °R × 5/4
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Reamur ke Fahrenheit</strong> <br>°F = (°R × 9/4) + 32
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Reamur ke Kelvin</strong> <br>°K = (°R × 5/4) + 273.15
+              </p> 
+            </li>
+            <li>
+              <p class="last-p"> 
+                Rumus konversi suhu <strong>Reamur ke Rankine</strong> <br>⁰Ra = (°R × 9/4) + 491,67
+              </p> 
+            </li>
+            </ol>
+
+            
+            <li type="none"> <h3>Konversi Suhu Rankine (Ra)</h3> </li>
+            <ol type="1"><li> 
+              <p>
+                Rumus konversi suhu <strong>Rankine ke Celcius</strong> <br>°C = (°Ra - 491.67) × 5/9
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Rankine ke Fahrenheit</strong> <br>°K= °Ra × 5/9
+              </p> 
+            </li>
+            <li>
+              <p> 
+                Rumus konversi suhu <strong>Rankine ke Kelvin</strong> <br>⁰R = (4/5) × ⁰C
+              </p> 
+            </li>
+            <li>
+              <p class="last-p"> 
+                Rumus konversi suhu <strong>Rankine ke Reamur</strong> <br>°R = (°Ra / 1,8 + 273.15) × 0,8
+              </p> 
+            </li>
+            </ol>
+
+          </ul>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+  </body>
 </html>
